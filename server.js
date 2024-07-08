@@ -8,9 +8,14 @@ app.use('/Person',personroutes)
 const Task=require('./models/task')
 const menuroute=require('./routes/menuroute')
 app.use('/menu',menuroute)
+require('dotenv').config();
+
+
 app.get('/',(req,res)=>{
     res.send("Welcome to my hotel !!");
 })
-app.listen(2000,()=>{
+
+const Port=process.env.Port || 2000
+app.listen(Port,()=>{
     console.log('server is live now');
 });

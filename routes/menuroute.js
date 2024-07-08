@@ -56,6 +56,7 @@ router.delete("/:id",async(req,res)=>{
         res.status(500).json({error:"Internal Server error"})
     }
 })
+//always export router as it is a Router file and we are using router as a object variable here
 module.exports=router;
 
 
